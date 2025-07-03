@@ -62,7 +62,7 @@ npm run dev
 yarn dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application
+5. Open [http://localhost:58961](http://localhost:58961) with your browser to see the application
 
 ## Project Structure
 
