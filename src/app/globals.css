@@ -10,17 +10,57 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-cairo: var(--font-cairo);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Dark mode disabled */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cairo), Arial, sans-serif;
+}
+
+/* Apply Cairo font to all elements */
+*, h1, h2, h3, h4, h5, h6, p, span, div, button, input, select, textarea {
+  font-family: var(--font-cairo), Arial, sans-serif;
+}
+
+/* Custom styles for the product page */
+.product-description {
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* Style for color options */
+.color-option {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.color-option.selected {
+  border-color: #000;
+}
+
+/* Style for size options */
+.size-option {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-option.selected {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
 }
